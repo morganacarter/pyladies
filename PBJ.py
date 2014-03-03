@@ -51,10 +51,10 @@ elif peanut_butter==0:
     print "You need more peanut butter"
 elif jelly==0:
     print "You need more jelly"
-elif bread>=2 and bread%2==0 and peanut_butter>=1 and jelly>=1:
+elif bread>=2 and bread/2==0 and peanut_butter>=1 and jelly>=1:
     print "I can make", min(min_sandwiches),"peanut butter and jelly sandwiches!!"
 elif bread>=2 and peanut_butter>=1 and jelly>=1:
-    print "I can make", min(min_sandwiches),"peanut butter and jelly sandwiches and", bread%2 ,"open faced sandwiches"
+    print "I can make", min(min_sandwiches),"peanut butter and jelly sandwiches and", bread/2 ,"open faced sandwiches"
 else:
     print "No lunch for me today"
 
