@@ -31,6 +31,7 @@ allattendees = remove_duplicates(filmattendees + hhattendees)
 print allattendees
 
 # Goal 2: Who came to *both* your Film Screening and your Happy hour?
+##Append the following to the code above.
 
 def only_duplicates(fromlist):
     fromlist = list(set(fromlist))
