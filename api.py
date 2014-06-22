@@ -31,8 +31,16 @@ if title_endpoint[0:4] == 'The ':
 if title_endpoint == []:
     print "Sorry not found"
 if len(title_endpoint) == 7 and title_endpoint.isdigit() == True:
-    raw_response = "http://bechdeltest.com/api/v1/getMovieByImdbId?imdbid={0}","http://www.omdbapi.com/?i=tt{0}&t=".format(title_endpoint)
+    raw_response = "http://bechdeltest.com/api/v1/getMovieByImdbId?imdbid={0}".format(title_endpoint)
 else:
     raw_response = "http://bechdeltest.com/api/v1/getMoviesByTitle?title={0}".format(title_endpoint).replace(" ","+")
 response = requests.get(raw_response).json()
 print response
+
+
+if len(title_endpoint) == 7 and title_endpoint.isdigit() == True:
+    raw_response2 = "http://www.omdbapi.com/?i=tt{0}&t=".format(title_endpoint)
+else:
+    raw_response2 ="http://www.omdbapi.com/?i&t={0}".format(title_endpoint).replace(" ","+")
+response2 = requests.get(raw_response2).json()
+print response2
